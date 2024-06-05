@@ -56,7 +56,6 @@ export class welcomeScene extends Scene {
 
         this.add(actorLogo)
 
-
         this.add(this.textoIniciar)
 
         this.textoIniciar?.actions.repeatForever( context => {
