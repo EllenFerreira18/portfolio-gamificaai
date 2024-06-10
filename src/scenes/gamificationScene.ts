@@ -1,4 +1,4 @@
-import { Actor, Color, Engine, FadeInOut, Keys, Scene, Transition, vec } from "excalibur";
+import { Actor, Color, Engine, FadeInOut, Keys, Scene, SceneActivationContext, Transition, vec } from "excalibur";
 import { Resources } from "../resources";
 
 export class gamificationScene extends Scene {
@@ -50,5 +50,16 @@ export class gamificationScene extends Scene {
         actorImagem.graphics.add(imagemImagem)
 
         this.add(actorImagem) 
+
+        this.input.keyboard.on("press", (event) => {
+            if (event.key == Keys.Enter) {
+                this.fadeOutElement(this.elementoHTML!)
+                engine.goToScene("exposicao")
+            }
+        })
+    }
+
+    onDeactivate(context: SceneActivationContext<undefined>): void {
+        this.elementoHTML?.remove()
     }
 }
