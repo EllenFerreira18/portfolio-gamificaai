@@ -39,17 +39,17 @@ export class gamificationScene extends Scene {
 
         this.elementoHTML.classList.add("gamificacao")
 
-        let actorImagem = new Actor({
+        let actorLogoVertical = new Actor({
             pos: vec(300, engine.halfDrawHeight)
         })
 
-        let imagemImagem = Resources.Imagem.toSprite()
+        let LogoVerticalLogoVertical = Resources.LogoVertical.toSprite()
 
-        imagemImagem.scale = vec(0.7, 0.7)
+        LogoVerticalLogoVertical.scale = vec(0.7, 0.7)
 
-        actorImagem.graphics.add(imagemImagem)
+        actorLogoVertical.graphics.add(LogoVerticalLogoVertical)
 
-        this.add(actorImagem) 
+        this.add(actorLogoVertical) 
 
         this.input.keyboard.on("press", (event) => {
             if (event.key == Keys.Enter) {
