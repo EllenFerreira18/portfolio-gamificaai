@@ -249,8 +249,6 @@ export class Player extends Actor {
     onPreUpdate(engine: Engine<any>, delta: number): void {
         if (this.ultimoColisor && this.pos.distance(this.ultimoColisor.worldPos) > 50) {
             this.temObjetoProximo = false
-            console.log("Está longe");
-
         }
     }
 }

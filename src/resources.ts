@@ -16,8 +16,11 @@ import tsxBibliotecaPath from "./maps/tileset_biblioteca.tsx?url"
 import tmxMapaPath from "./maps/showroom_map.tmx?url"
 
 import playerSpritePath from "./sprites/personagem.png"
-import classico from "./sounds/zelda.mp3";
+import npcASpriteSheet from "./sprites/npcA.png"
+import npcBSpriteSheet from "./sprites/npcB.png"
+import npcCSpriteSheet from "./sprites/npcC.png"
 
+import classico from "./sounds/zelda.mp3"
 
 export const Resources = {
   Sword: new ImageSource(sword),
@@ -26,6 +29,10 @@ export const Resources = {
   LogoVertical: new ImageSource(logoVertical),
   Homem: new ImageSource(homem),
   ClassicBGM: new Sound(classico),
+
+  NpcASpriteSheet: new ImageSource(npcASpriteSheet, { filtering: ImageFiltering.Pixel }),
+  NpcBSpriteSheet: new ImageSource(npcBSpriteSheet, { filtering: ImageFiltering.Pixel }),
+  NpcCSpriteSheet: new ImageSource(npcCSpriteSheet, { filtering: ImageFiltering.Pixel }),
   
   Mapa: new TiledResource(tmxMapaPath, {
     pathMap: [
